@@ -1,14 +1,4 @@
-
 <!DOCTYPE html>
-<!--
-Created using JS Bin
-http://jsbin.com
-
-Copyright (c) 2025 by anonymous (http://jsbin.com/hagujuyuri/1/edit)
-
-Released under the MIT license: http://jsbin.mit-license.org
--->
-<meta name="robots" content="noindex">
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
@@ -127,6 +117,13 @@ Released under the MIT license: http://jsbin.mit-license.org
                 padding-left: 40px; /* 모바일에서만 왼쪽으로 네 칸 만큼 이동 */
                 text-align: left;   /* 모바일에서만 텍스트 왼쪽 정렬 */
             }
+
+            h2 {
+                font-size: 1.2rem; /* 텍스트 크기 조정 */
+                white-space: nowrap; /* 텍스트가 한 줄로 보이도록 강제 */
+                overflow: hidden; /* 넘치는 부분은 잘림 */
+                text-overflow: ellipsis; /* 텍스트가 넘치면 '...'로 처리 */
+            }
         }
     </style>
 </head>
@@ -171,7 +168,7 @@ Released under the MIT license: http://jsbin.mit-license.org
 
     <footer>
         <p>Whatsapp : <a href="https://wa.me/821046777662" style="color: yellow; text-decoration: underline;">Click to chat</a> </p>
-          <p>Email : streetellers@gmail.com</p>
+        <p>Email : streetellers@gmail.com</p>
         <p> © 2025. Streetellers</p>
     </footer>
 
