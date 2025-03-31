@@ -131,7 +131,14 @@
     max-width: 100vw; /* 뷰포트를 초과하지 않도록 설정 */
     box-sizing: border-box; /* 패딩과 보더 포함한 크기 계산 */
 }
-        
+
+        .pixel-text, h2 {
+    max-width: 100%; /* 화면 너비 초과 방지 */
+    word-wrap: break-word; /* 긴 단어 줄바꿈 */
+    white-space: normal; /* 줄바꿈 허용 */
+    overflow: hidden; /* 넘치는 내용 숨김 */
+    text-align: center; /* 중앙 정렬 유지 */
+}
     </style>
 </head>
 <body>
