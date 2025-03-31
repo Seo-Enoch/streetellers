@@ -125,6 +125,13 @@
                 text-overflow: ellipsis; /* 텍스트가 넘치면 '...'로 처리 */
             }
         }
+
+        html, body {
+    overflow-x: hidden; /* 가로 스크롤 방지 */
+    max-width: 100vw; /* 뷰포트를 초과하지 않도록 설정 */
+    box-sizing: border-box; /* 패딩과 보더 포함한 크기 계산 */
+}
+        
     </style>
 </head>
 <body>
