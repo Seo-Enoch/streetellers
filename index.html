@@ -50,14 +50,17 @@
             color: black;
         }
 
-      footer {
-    width: 100%;
-    text-align: center;
-    color: lime;
-    background-color: black;
-    padding: 10px;
-}
-
+        /* 고정된 footer 스타일 */
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            color: lime;
+            background-color: black;
+            padding: 10px;
+            margin-top: 20px; /* 위에 내용과 간격 조정 */
+        }
 
         .contact-message {
             color: red;
@@ -96,11 +99,22 @@
         #paypal-container-YFB4GZWWUR4XL {
             margin-top: 50px;
         }
+      
+        /* 새로운 스타일 추가 */
+        .subtitle {
+            text-align: center;
+            color: orange; /* DOS 스타일에 어울리는 색 */
+            font-size: 1em; /* 제목보다 작게 */
+            font-family: 'Courier New', monospace;
+            margin-top: -20px; /* 제목과 너무 떨어지지 않게 */
+        }
+      
     </style>
 </head>
 <body>
 
     <h1>Streetellers</h1>
+  <h2 class="subtitle">Storytellers on the Street</h2>
 
     <!-- 영어로 된 안내 메시지 (타이틀 바로 아래 위치) -->
     <div class="contact-message">
@@ -131,6 +145,7 @@
         <p>Price per Person : $80</p>
     </div>
 
+  
     <script src="https://www.paypal.com/sdk/js?client-id=BAApkoKiLVJxBep-s_Lp5fdwDjyPiSXTVF23aJENe5mWI2n0bA9-xXox10WOWrQzFALqC6iAz8V6aNR7Es&components=hosted-buttons&disable-funding=venmo&currency=USD"></script>
     <div id="paypal-container-YFB4GZWWUR4XL"></div>
     <script>
