@@ -113,89 +113,49 @@
 
         /* 반응형 디자인 (모바일 화면에 맞게 조정) */
         @media screen and (max-width: 768px) {
-            .pixel-text {
-                font-size: 1.5rem; /* 모바일에서 제목 크기 작게 */
-            }
-
-            h2 {
-                font-size: 1.2rem; /* 모바일에서 부제 크기 조정 */
-                margin-top: 10px;
-            }
-
-            .tour-item {
-                padding: 8px; /* 투어 항목 크기 조정 */
-            }
-
-            .book-button {
-                padding: 8px 16px; /* 버튼 크기 조정 */
-                font-size: 1em; /* 모바일에서 버튼 글씨 크기 조정 */
-            }
-
             footer {
-                font-size: 1em; /* 푸터 크기 조정 */
+                font-size: 1em;
+                text-align: center; /* 푸터 텍스트 중앙 정렬 */
                 padding: 8px;
-                text-align: center; /* 모바일에서도 가운데 정렬 유지 */
-            }
-
-            .contact-message {
-                font-size: 0.9em; /* 연락처 메시지 글씨 크기 조정 */
-            }
-
-            .console {
-                font-size: 1em; /* 콘솔 글씨 크기 조정 */
-            }
-
-            .console input {
-                font-size: 1em; /* 입력 필드 글씨 크기 조정 */
-            }
-
-            /* 모바일에서 이메일을 아래로 이동 */
-            .footer-contact {
-                display: block;
-                margin-top: 10px;
             }
 
             /* 모바일에서 "All rights reserved." 숨기기 */
             footer p:last-child {
                 display: none;
             }
+
+            /* 모바일에서 "© 2025. Streetellers"만 보이도록 수정 */
+            footer p:first-child {
+                margin-bottom: 0;
+            }
+
+            .footer-contact {
+                display: none; /* 이메일을 숨기기 */
+            }
         }
 
         @media screen and (max-width: 480px) {
-            .pixel-text {
-                font-size: 1.2rem; /* 제목을 더 작게 조정 */
-            }
-
-            h2 {
-                font-size: 1rem; /* 부제 크기 더 작게 조정 */
-            }
-
-            .tour-item {
-                margin-bottom: 15px; /* 항목 간 여백을 조금 더 줄임 */
-            }
-
-            .book-button {
-                padding: 6px 12px; /* 버튼 크기 더 작게 조정 */
-                font-size: 0.9em; /* 모바일에서 글씨 크기 더 작게 */
-            }
-
             footer {
-                font-size: 0.9em; /* 푸터 글씨 크기 줄이기 */
-                text-align: center; /* 여기도 가운데 정렬 */
+                font-size: 0.9em;
+                text-align: center; /* 푸터 텍스트 중앙 정렬 */
+                padding: 8px;
             }
 
-            .contact-message {
-                font-size: 0.8em; /* 연락처 메시지 글씨 크기 줄이기 */
+            /* 모바일에서 "All rights reserved." 숨기기 */
+            footer p:last-child {
+                display: none;
             }
 
-            .console {
-                font-size: 1em; /* 콘솔 글씨 크기 다시 줄이기 */
+            /* 모바일에서 "© 2025. Streetellers"만 보이도록 수정 */
+            footer p:first-child {
+                margin-bottom: 0;
             }
 
-            .console input {
-                font-size: 1em; /* 입력 필드 글씨 크기 줄이기 */
+            .footer-contact {
+                display: none; /* 이메일을 숨기기 */
             }
         }
+
     </style>
 </head>
 <body>
@@ -240,8 +200,9 @@
     <footer>
         <p>Whatsapp : <a href="https://wa.me/821046777662" style="color: yellow; text-decoration: underline;">Click to chat</a></p>
         <p class="footer-contact">Email : streetellers@gmail.com</p>
-        <p> © 2025. Streetellers All rights reserved.</p>
+        <p> © 2025. Streetellers</p>
     </footer>
 
 </body>
 </html>
+
