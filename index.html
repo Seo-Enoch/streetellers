@@ -132,13 +132,21 @@
     box-sizing: border-box; /* 패딩과 보더 포함한 크기 계산 */
 }
 
-        .pixel-text, h2 {
-    max-width: 100%; /* 화면 너비 초과 방지 */
-    word-wrap: break-word; /* 긴 단어 줄바꿈 */
-    white-space: normal; /* 줄바꿈 허용 */
-    overflow: hidden; /* 넘치는 내용 숨김 */
-    text-align: center; /* 중앙 정렬 유지 */
+.pixel-text {
+    font-size: 2rem; /* 기본 크기 (PC) */
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 10px auto;
 }
+
+@media screen and (max-width: 768px) {
+    .pixel-text {
+        font-size: min(8vw, 1.8rem); /* 모바일에서 화면 비율에 따라 크기 조정 */
+    }
+}
+        
     </style>
 </head>
 <body>
