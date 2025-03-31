@@ -15,6 +15,19 @@
             padding: 20px;
             font-size: 1.2em;
             padding-bottom: 150px; /* 하단 여백 추가 */
+            display: flex;
+            justify-content: flex-start; /* 콘텐츠 중앙 정렬 */
+            flex-direction: column;
+            align-items: center; /* 수평 중앙 정렬 */
+            height: 100vh; /* 화면 높이 */
+            box-sizing: border-box;
+        }
+
+        /* 전체 콘텐츠 제한 */
+        .container {
+            max-width: 900px;  /* 최대 너비 900px로 제한 */
+            width: 100%;
+            flex-grow: 1;  /* 컨텐츠가 화면 크기에 맞게 늘어날 수 있도록 */
         }
 
         .pixel-text {
@@ -63,14 +76,13 @@
 
         /* 고정된 footer 스타일 */
         footer {
-            position: fixed;
+            position: fixed; /* 고정 위치로 설정 */
             bottom: 0;
             width: 100%;
-            text-align: center;
+            text-align: center; /* 텍스트 중앙 정렬 */
             color: lime;
             background-color: black;
             padding: 10px;
-            margin-top: 20px;
         }
 
         .contact-message {
@@ -127,73 +139,75 @@
         }
 
         html, body {
-    overflow-x: hidden; /* 가로 스크롤 방지 */
-    max-width: 100vw; /* 뷰포트를 초과하지 않도록 설정 */
-    box-sizing: border-box; /* 패딩과 보더 포함한 크기 계산 */
-}
+            overflow-x: hidden; /* 가로 스크롤 방지 */
+            max-width: 100vw; /* 뷰포트를 초과하지 않도록 설정 */
+            box-sizing: border-box; /* 패딩과 보더 포함한 크기 계산 */
+        }
 
-.pixel-text {
-    font-size: 2rem; /* 기본 크기 (PC) */
-    text-align: center;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    margin: 10px auto;
-}
+        .pixel-text {
+            font-size: 2rem; /* 기본 크기 (PC) */
+            text-align: center;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin: 10px auto;
+        }
 
-@media screen and (max-width: 768px) {
-    .pixel-text {
-        font-size: min(8vw, 1.8rem); /* 모바일에서 화면 비율에 따라 크기 조정 */
-    }
-}
+        @media screen and (max-width: 768px) {
+            .pixel-text {
+                font-size: min(8vw, 1.8rem); /* 모바일에서 화면 비율에 따라 크기 조정 */
+            }
+        }
         
     </style>
 </head>
 <body>
 
-    <h1 class="pixel-text">Streetellers</h1>
-  
-    <h2>Storytellers on the Street</h2>
+    <div class="container">
+        <h1 class="pixel-text">Streetellers</h1>
 
-    <div class="contact-message">
-        Before making a payment, please contact me via <a href="https://wa.me/821046777662" style="color: yellow; text-decoration: underline;">WhatsApp</a> or email to confirm the availability of your preferred tour date.
-    </div>
+        <h2>Storytellers on the Street</h2>
 
-    <h2></h2>
+        <div class="contact-message">
+            Before making a payment, please contact me via <a href="https://wa.me/821046777662" style="color: yellow; text-decoration: underline;">WhatsApp</a> or email to confirm the availability of your preferred tour date.
+        </div>
 
-   <div class="tour-item">
-        <h3>Seoul Night Tour A (4Hours) : 18:00 - 22:00 </h3>
-        <p>Tour itinerary : Naksan Hiking (30-minute walk to the top) -> Gwangjang Market (Foody Tour)</p>
-        <p>Meetup Place and Time : Hyehwa Station Exit No.4 at 17:50</p>
-        <p>Price per Person : $50</p>
-    </div>
+        <h2></h2>
+
+        <div class="tour-item">
+            <h3>Seoul Night Tour A (4Hours) : 18:00 - 22:00 </h3>
+            <p>Tour itinerary : Naksan Hiking (30-minute walk to the top) -> Gwangjang Market (Foody Tour)</p>
+            <p>Meetup Place and Time : Hyehwa Station Exit No.4 at 17:50</p>
+            <p>Price per Person : $50</p>
+        </div>
+        
+        <div class="tour-item">
+            <h3>Seoul Night Tour B (4Hours) : 18:00 - 22:00 </h3>
+            <p>Tour itinerary : Changgyeonggung palace -> Gwangjang Market (Foody Tour) -> Jogyesa Temple (4 hours)</p>
+            <p>Meetup Place and Time : Hyehwa Station Exit No.4 at 17:50</p>
+            <p>Price per Person : $50</p>
+        </div>
+
+        <div class="tour-item">
+            <h3>Customize Your Tour (4H) </h3>
+            <p>The meetup location will be arranged according to your customized itinerary.</p>
+            <p>Price per Person : $50</p>
+        </div>
     
-    <div class="tour-item">
-        <h3>Seoul Night Tour B (4Hours) : 18:00 - 22:00 </h3>
-        <p>Tour itinerary : Changgyeonggung palace -> Gwangjang Market (Foody Tour) -> Jogyesa Temple (4 hours)</p>
-        <p>Meetup Place and Time : Hyehwa Station Exit No.4 at 17:50</p>
-        <p>Price per Person : $50</p>
-    </div>
+        <div class="tour-item">
+            <h3>Customize Your Tour (8H) </h3>
+            <p>The meetup location will be arranged according to your customized itinerary.</p>
+            <p>Price per Person : $80</p>
+        </div>
 
-    <div class="tour-item">
-        <h3>Customize Your Tour (4H) </h3>
-        <p>The meetup location will be arranged according to your customized itinerary.</p>
-        <p>Price per Person : $50</p>
+        <script src="https://www.paypal.com/sdk/js?client-id=BAApkoKiLVJxBep-s_Lp5fdwDjyPiSXTVF23aJENe5mWI2n0bA9-xXox10WOWrQzFALqC6iAz8V6aNR7Es&components=hosted-buttons&disable-funding=venmo&currency=USD"></script>
+        <div id="paypal-container-YFB4GZWWUR4XL"></div>
+        <script>
+          paypal.HostedButtons({
+            hostedButtonId: "YFB4GZWWUR4XL",
+          }).render("#paypal-container-YFB4GZWWUR4XL")
+        </script>
     </div>
-  
-    <div class="tour-item">
-        <h3>Customize Your Tour (8H) </h3>
-        <p>The meetup location will be arranged according to your customized itinerary.</p>
-        <p>Price per Person : $80</p>
-    </div>
-
-    <script src="https://www.paypal.com/sdk/js?client-id=BAApkoKiLVJxBep-s_Lp5fdwDjyPiSXTVF23aJENe5mWI2n0bA9-xXox10WOWrQzFALqC6iAz8V6aNR7Es&components=hosted-buttons&disable-funding=venmo&currency=USD"></script>
-<div id="paypal-container-YFB4GZWWUR4XL"></div>
-<script>
-  paypal.HostedButtons({
-    hostedButtonId: "YFB4GZWWUR4XL",
-  }).render("#paypal-container-YFB4GZWWUR4XL")
-</script>
 
     <footer>
         <p>Whatsapp : <a href="https://wa.me/821046777662" style="color: yellow; text-decoration: underline;">Click to chat</a> </p>
