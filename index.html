@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -30,7 +31,6 @@
             flex-grow: 1;  /* 컨텐츠가 화면 크기에 맞게 늘어날 수 있도록 */
         }
 
-        /* 타이핑 애니메이션 */
         .pixel-text {
             font-family: 'Press Start 2P', cursive;
             text-align: center;
@@ -38,28 +38,6 @@
             font-size: 2rem;
             margin-top: 20px;
             text-transform: uppercase;
-            width: 0; /* 처음에는 텍스트 숨김 */
-            overflow: hidden; /* 넘치는 부분 숨김 */
-            white-space: nowrap; /* 한 줄로 표시 */
-            border-right: 4px solid lime; /* 타이핑 커서 효과 */
-            animation: typing 4s steps(20) 1s forwards, blink-caret 0.75s step-end infinite; /* 타이핑 애니메이션 */
-        }
-
-        /* 타이핑 효과 */
-        @keyframes typing {
-            from {
-                width: 0;
-            }
-            to {
-                width: 20ch; /* 텍스트의 길이에 맞게 조정 */
-            }
-        }
-
-        /* 타이핑 커서 깜빡이는 효과 */
-        @keyframes blink-caret {
-            50% {
-                border-color: transparent;
-            }
         }
 
         h2 {
@@ -145,7 +123,7 @@
         #paypal-container-YFB4GZWWUR4XL {
             margin-top: 50px;
         }
-
+      
         /* 모바일에서만 적용될 스타일 */
         @media screen and (max-width: 768px) {
             footer {
@@ -167,21 +145,21 @@
             box-sizing: border-box; /* 패딩과 보더 포함한 크기 계산 */
         }
 
-      .pixel-text {
-    font-size: 1.5rem; /* 기본 크기 (PC) */
-    text-align: center;
-    white-space: nowrap; /* 한 줄 유지 */
-    overflow: hidden;
-    text-overflow: ellipsis;
-    margin: 10px auto;
-}
+        .pixel-text {
+            font-size: 2rem; /* 기본 크기 (PC) */
+            text-align: center;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin: 10px auto;
+        }
 
-@media screen and (max-width: 768px) {
-    .pixel-text {
-        font-size: min(8vw, 1.5rem); /* 모바일에서 크기 조정 */
-    }
-}
-
+        @media screen and (max-width: 768px) {
+            .pixel-text {
+                font-size: min(8vw, 1.8rem); /* 모바일에서 화면 비율에 따라 크기 조정 */
+            }
+        }
+        
     </style>
 </head>
 <body>
@@ -191,7 +169,7 @@
      style="max-width: 100%; width: 400px; display: block; margin: 0 auto;">
   
     <div class="container">
-        <h1 class="pixel-text">LET's explore Seoul!</h1>
+        <h1 class="pixel-text">  </h1>
 
         <h2>  </h2>
 
@@ -244,4 +222,3 @@
 
 </body>
 </html>
-
