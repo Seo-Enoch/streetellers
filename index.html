@@ -66,7 +66,7 @@
             position: fixed;
             bottom: 0;
             width: 100%;
-            text-align: center;
+            text-align: center; /* 가운데 정렬 */
             color: lime;
             background-color: black;
             padding: 10px;
@@ -134,6 +134,7 @@
             footer {
                 font-size: 1em; /* 푸터 크기 조정 */
                 padding: 8px;
+                text-align: center; /* 모바일에서도 가운데 정렬 유지 */
             }
 
             .contact-message {
@@ -146,6 +147,17 @@
 
             .console input {
                 font-size: 1em; /* 입력 필드 글씨 크기 조정 */
+            }
+
+            /* 모바일에서 이메일을 아래로 이동 */
+            .footer-contact {
+                display: block;
+                margin-top: 10px;
+            }
+
+            /* 모바일에서 "All rights reserved." 숨기기 */
+            footer p:last-child {
+                display: none;
             }
         }
 
@@ -169,6 +181,7 @@
 
             footer {
                 font-size: 0.9em; /* 푸터 글씨 크기 줄이기 */
+                text-align: center; /* 여기도 가운데 정렬 */
             }
 
             .contact-message {
@@ -225,7 +238,8 @@
     </script>
 
     <footer>
-        <p>Whatsapp : <a href="https://wa.me/821046777662" style="color: yellow; text-decoration: underline;">Click to chat</a> Email : streetellers@gmail.com</p>
+        <p>Whatsapp : <a href="https://wa.me/821046777662" style="color: yellow; text-decoration: underline;">Click to chat</a></p>
+        <p class="footer-contact">Email : streetellers@gmail.com</p>
         <p> © 2025. Streetellers All rights reserved.</p>
     </footer>
 
